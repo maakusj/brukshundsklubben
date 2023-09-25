@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv-Se">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login - Brukshundsklubben</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div>
+			<form id="loginForm">
+				<!--This form element contains input elements like text fields and submit buttons. The form is what will submit the data.-->
+				<fieldset>
+					<!--Used inside a form element for grouping elements to the form both semantically and visually (can use legend here for example).-->
+					<div>
+						<legend>Logga in</legend>
+						<!--legend works like a heading but for the fieldset-->
+						<label for="inputUserName">Namn</label>
+						<!--Gives us a text/name beside the field. Label bound together with input through the id. Makes it easier to click into the text field since you can also click on the text to get there-->
+						<input type="text" id="inputUserName" />
+						<!--input text field for the username-->
+					</div>
+					<div>
+						<label for="inputPassWord">Lösenord</label>
+						<!--label for password-->
+						<input type="text" id="inputPassWord" />
+						<!--input text field for the password-->
+					</div>
+					<div>
+						<input type="submit" value="Logga in" />
+						<!--If we click this submit button the event will trigger the form to submit/send the data (in our case we catch the id of the form in script.js) -->
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<script src="./script.js" charset="UTF-8"></script>
+	</body>
+</html>

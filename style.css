@@ -1,0 +1,7 @@
+/* set everything to begin with zero padding and margin, I can add these later on the elements I want to.
+box-sixing border-box includes the margin, padding and borders when calculating the width and height of elements later on. */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
