@@ -7,32 +7,68 @@
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<div>
-			<form id="loginForm">
-				<!--This form element contains input elements like text fields and submit buttons. The form is what will submit the data.-->
-				<fieldset>
-					<!--Used inside a form element for grouping elements to the form both semantically and visually (can use legend here for example).-->
-					<div>
+		<header>
+			<h1>Brukshundsklubben</h1>
+		</header>
+		<main>
+			<div id="loginFormContainer">
+				<aside class="dogContainer">
+					<img
+						src="./images/dog1.jpg"
+						alt="Close up picture of dog in the woods, trying to find some truffle"
+					/>
+					<h2>Föreningens regler</h2>
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing
+						elit. Id consectetur iure at excepturi molestias officia
+						sapiente error quidem labore blanditiis. Dolores
+						dignissimos ab quos ullam consequuntur odio aut facere
+						doloremque.
+					</p>
+				</aside>
+				<form id="loginForm">
+					<!--This form element contains input elements like text fields and submit buttons. The form is what will submit the data.-->
+					<fieldset id="loginFieldset">
+						<!--Used inside a form element for grouping elements to the form both semantically and visually (can use legend here for example).-->
 						<legend>Logga in</legend>
-						<!--legend works like a heading but for the fieldset-->
-						<label for="inputUserName">Namn</label>
-						<!--Gives us a text/name beside the field. Label bound together with input through the id. Makes it easier to click into the text field since you can also click on the text to get there-->
-						<input type="text" id="inputUserName" />
-						<!--input text field for the username-->
-					</div>
-					<div>
-						<label for="inputPassWord">Lösenord</label>
-						<!--label for password-->
-						<input type="text" id="inputPassWord" />
-						<!--input text field for the password-->
-					</div>
-					<div>
-						<input type="submit" value="Logga in" />
-						<!--If we click this submit button the event will trigger the form to submit/send the data (in our case we catch the id of the form in script.js) -->
-					</div>
-				</fieldset>
-			</form>
-		</div>
-		<script src="./script.js" charset="UTF-8"></script>
+						<div class="input-fields">
+							<!--legend works like a heading but for the fieldset-->
+							<label for="inputUserName">Namn</label>
+							<!--Gives us a text/name beside the field. Label bound together with input through the id. Makes it easier to click into the text field since you can also click on the text to get there-->
+							<input
+								type="text"
+								id="inputUserName"
+								placeholder="Namn"
+							/>
+							<!--input text field for the username. Placeholder gives an hint to what the user may expect in the field, gives us an initial text wthat goes away when start of writing. -->
+						</div>
+						<div class="input-fields">
+							<label for="inputPassWord">Lösenord</label>
+							<!--label for password-->
+							<input
+								type="password"
+								id="inputPassWord"
+								placeholder="Lösenord"
+							/>
+							<!--input password field for the password (gives us masked characters, and doesn't "remember" the inputs)-->
+						</div>
+						<div>
+							<input
+								class="submit-button"
+								type="submit"
+								value="Logga in"
+							/>
+							<!--If we click this submit button the event will trigger the form to submit/send the data (in our case we catch the id of the form in script.js) -->
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</main>
+		<footer>hejsan svejsan</footer>
+		<script
+			type="text/javascript"
+			src="./script.js"
+			charset="UTF-8"
+		></script>
 	</body>
 </html>
