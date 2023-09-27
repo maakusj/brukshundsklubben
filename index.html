@@ -5,6 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Login - Brukshundsklubben</title>
 		<link rel="stylesheet" href="./style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Vollkorn+SC&family=Vollkorn:wght@600&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<header>
@@ -14,6 +20,7 @@
 			<div id="loginFormContainer">
 				<aside class="dogContainer">
 					<img
+						id="dogImg"
 						src="./images/dog1.jpg"
 						alt="Close up picture of dog in the woods, trying to find some truffle"
 					/>
@@ -30,7 +37,7 @@
 					<!--This form element contains input elements like text fields and submit buttons. The form is what will submit the data.-->
 					<fieldset id="loginFieldset">
 						<!--Used inside a form element for grouping elements to the form both semantically and visually (can use legend here for example).-->
-						<legend>Logga in</legend>
+						<legend>Medlem</legend>
 						<div class="input-fields">
 							<!--legend works like a heading but for the fieldset-->
 							<label for="inputUserName">Namn</label>
@@ -64,7 +71,10 @@
 				</form>
 			</div>
 		</main>
-		<footer>hejsan svejsan</footer>
+		<footer>
+			<h3>Kontakta oss</h3>
+			<p>info@brukshundsklubben.se</p>
+		</footer>
 		<script
 			type="text/javascript"
 			src="./script.js"

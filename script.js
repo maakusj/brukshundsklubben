@@ -6,7 +6,9 @@ const losenord = "qwe123";
 const welcomeDiv = document.createElement("div"); //create a div element that's going to display if we put the correct username and password in
 welcomeDiv.setAttribute("id", "welcome"); //set an id to this div so I can grab it in CSS
 const welcomeHeading = document.createElement("h2"); //create the heading thats going to include the welcome text
-const welcomeText = document.createTextNode("Välkommen, du är nu inloggad"); //the heading text, it's appended later
+const welcomeText = document.createTextNode(
+	"Välkommen " + namn + "! Du är nu inloggad"
+); //the heading text, it's appended later
 
 const logOutBtn = document.createElement("button"); //button for the welcome page and the try again page
 logOutBtn.setAttribute("id", "logOut"); //set an id for use with CSS and
@@ -22,10 +24,10 @@ const loginForm = document.getElementById("loginForm"); //declaring the form tha
 
 /* this checks if it's already logged in by trying to get the setItem called "namn" (assigning it to variable namnSaved),
  and check it against our constant "namn". If the key is in the localStorage then take us directly to the welcome page.*/
+
 const namnSaved = localStorage.getItem("namn");
 if (namnSaved == namn) {
 	welcome();
-	console.log("namnSaved");
 }
 
 /* Get the form (loginForm) by Id , add an eventlistener to that form; which fires when the form is submitted (it is the form that sends the data).
@@ -55,6 +57,12 @@ function welcome() {
 	};
 
 	loginForm.appendChild(welcomeDiv); //when true the created div displays as a child to the <form>
+	const welcomeImage = document.getElementById("dogImg"); //change picture, and set alternative text
+	welcomeImage.src = "./images/dog2.jpg";
+	welcomeImage.setAttribute(
+		"alt",
+		"Happy dog standing in the woods with its tounge out"
+	);
 }
 
 function notWelcome() {
@@ -64,6 +72,13 @@ function notWelcome() {
 	};
 
 	welcomeHeading.innerHTML = "Ogiltigt användarnamn eller lösenord"; //changing already existing welcome landing page to display different text.
-	logOutBtn.innerHTML = "Testa igen"; //same here, changing the welcome landing page button to display different text on it
+	logOutBtn.innerHTML = "Tillbaka"; //same here, changing the welcome landing page button to display different text on it
 	loginForm.appendChild(welcomeDiv); //and when this happens we append the div with these few modifications to it
+	welcomeDiv.setAttribute("id", "notWelcome"); //set the attribute according to notWelcome instead of welcome id
+	const notWelcomeImage = document.getElementById("dogImg");
+	notWelcomeImage.src = "./images/dog3.jpg";
+	notWelcomeImage.setAttribute(
+		"alt",
+		"Sad puppy wearing a yellow raincoat looking in to the camera"
+	);
 }
