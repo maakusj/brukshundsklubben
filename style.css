@@ -48,7 +48,7 @@ h1 {
 	text-align: justify;
 }
 
-img {
+.dogContainer img {
 	width: 350px;
 	border-radius: 8px;
 }
