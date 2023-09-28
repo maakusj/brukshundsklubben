@@ -11,7 +11,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	color: #363630;
 }
+
 header,
 footer {
 	height: 80px;
@@ -24,7 +26,6 @@ footer {
 	margin-top: auto;
 	align-items: center;
 	justify-content: center;
-	color: #363630;
 }
 
 main {
@@ -33,7 +34,6 @@ main {
 	height: 100%;
 	margin: 0px 15px;
 	margin-top: auto;
-	align-items: stretch;
 }
 
 h1 {
@@ -43,10 +43,10 @@ h1 {
 	align-items: center;
 	font-family: "Vollkorn", serif;
 	font-size: 3rem;
-	color: #363630;
 }
 
 .dogContainer {
+	/*includes both picture and the text that describes the associations rules of the*/
 	display: flex;
 	flex-direction: column;
 	width: 350px;
@@ -58,7 +58,6 @@ h1 {
 p,
 h2 {
 	margin: 5px 0px 0px 0px;
-	color: #363630;
 }
 
 .dogContainer p {
@@ -100,9 +99,10 @@ legend {
 	border: 1px solid #dbdbc5;
 	font-size: 1.5rem;
 	background-color: beige;
-	color: #363630;
 	padding: 3px 8px;
-	transform: translateX(-0.5rem);
+	transform: translateX(
+		-0.5rem
+	); /*moves the legend slightly to the left in x-axis*/
 	border-radius: 3px;
 }
 
@@ -115,6 +115,7 @@ legend {
 }
 
 .input-fields input:focus {
+	/*when clicked on the input fields*/
 	outline: none;
 	border-color: rgb(71, 132, 147);
 	border: 3px solid rgb(71, 132, 147);
@@ -127,14 +128,15 @@ legend {
 
 .input-fields label {
 	padding: 10px 30px 10px 10px;
-	color: #363630;
 }
 
 .subBtn {
+	/*div class to submit button*/
 	display: flex;
 	justify-content: flex-end;
 }
 
+/*input class to submit cutton*/
 .submit-button,
 #logOut {
 	border: 3px;
@@ -152,6 +154,7 @@ legend {
 }
 
 .invisible {
+	/*This is used to make the whole fieldset invisible, and instead use the created divs for succesful or not succesful login*/
 	display: none;
 }
 
@@ -164,7 +167,6 @@ legend {
 	padding: 15px;
 	gap: 15px;
 	border-radius: 8px;
-	color: #363630;
 }
 
 #notWelcome {
@@ -176,10 +178,10 @@ legend {
 	padding: 15px;
 	gap: 15px;
 	border-radius: 8px;
-	color: #363630;
 }
 
 @media (max-width: 820px) {
+	/* responsive for ipad and downwards, make it column instead*/
 	#loginFormContainer {
 		flex-direction: column;
 		gap: 0px;
@@ -190,6 +192,7 @@ legend {
 	}
 
 	#loginForm {
+		/*change the order so the loginform sets above the dogcontainer*/
 		order: 1;
 	}
 

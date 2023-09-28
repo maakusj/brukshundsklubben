@@ -1,5 +1,4 @@
-/* Create a key, give it a name and what value that keyname will hold; and set that key to localStorage (stored in web browser).
-Set keyName (called it "namn") and keyValue (in our case Bella). I set next keyName ("losenord") and keyValue (qwe123) */
+//Declaring the constants for the name and password we are going to use
 const namn = "Bella";
 const losenord = "qwe123";
 
@@ -31,14 +30,14 @@ if (namnSaved == namn) {
 }
 
 /* Get the form (loginForm) by Id , add an eventlistener to that form; which fires when the form is submitted (it is the form that sends the data).
-Created a function that gets the values of the HTML text fields, as well as the "setItems" and then compared those values inside an if statement.
+Created a function that gets the values of the HTML text fields, compare it to the constants namn and losenord in an if statement. If true setItems.
 */
 document.getElementById("loginForm").addEventListener("submit", function (e) {
 	e.preventDefault(); //since "submit" form is used, the default behaviour is that it tries to send the data to an URL via "acion" attribute which results in a full page reload. To overcome this, I used the preventdefault method, which cancels that event so it doesn't actually submit the form trying to make an http request, instead it will use my JavaScript code to get to the next "page".
 	const inputUserName = document.getElementById("inputUserName").value; //value that is written from the first textfield
 	const inputPassWord = document.getElementById("inputPassWord").value; //value that is written from the second textfield
 
-	/* Here I created an if statement that test if the written "inputUserName" from the first text field is equal to the already set userName (Bella).
+	/* Here I created an if statement that test if the written "inputUserName" from the first text field is equal to constant namn (Bella).
     And similarly we test the password against each other; both must be true. If true then we display "välkommen..." + button back, if not then display "ogiltigt..."+ button back */
 	if (inputUserName == namn && inputPassWord == losenord) {
 		localStorage.setItem("namn", inputUserName);
