@@ -21,10 +21,10 @@ welcomeDiv.appendChild(logOutBtn); //append the button to the div
 const loginFieldset = document.getElementById("loginFieldset"); //declaring the fieldset; this is going to be invisible when landing on the other "pages"
 const loginForm = document.getElementById("loginForm"); //declaring the form that contains the fieldset; this is later used for appending the divs for the other pages
 
-/* this checks if it's already logged in by trying to get the setItem called "namn" (assigning it to variable namnSaved),
+/* this checks if it's already logged in by trying to get the setItem called "keyNamn" (assigning it to variable namnSaved),
  and check it against our constant "namn". If the key is in the localStorage then take us directly to the welcome page.*/
 
-const namnSaved = localStorage.getItem("namn");
+const namnSaved = localStorage.getItem("keyNamn");
 if (namnSaved == namn) {
 	welcome();
 }
@@ -40,8 +40,8 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 	/* Here I created an if statement that test if the written "inputUserName" from the first text field is equal to constant namn (Bella).
     And similarly we test the password against each other; both must be true. If true then we display "välkommen..." + button back, if not then display "ogiltigt..."+ button back */
 	if (inputUserName == namn && inputPassWord == losenord) {
-		localStorage.setItem("namn", inputUserName);
-		localStorage.setItem("losenord", inputPassWord);
+		localStorage.setItem("keyNamn", inputUserName);
+		localStorage.setItem("keyLosenord", inputPassWord);
 		welcome();
 	} else {
 		notWelcome();
